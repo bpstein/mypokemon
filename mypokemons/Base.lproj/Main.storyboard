@@ -51,7 +51,7 @@
                                     <action selector="bSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evu-BB-bjr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="ez7-yZ-txx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ez7-yZ-txx">
                                 <rect key="frame" x="113" y="287" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Ern-Pl-s7M"/>
@@ -102,7 +102,6 @@
     <resources>
         <image name="My-Pokemons" width="447" height="114"/>
         <image name="background" width="1131" height="707"/>
-        <image name="pikachu" width="300" height="281"/>
         <image name="poke_ball" width="767" height="767"/>
     </resources>
 </document>

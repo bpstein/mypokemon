@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lbPokemonName: UILabel!
     
-    var pokemonList: [String] = ["caterpie", "ekans", "pikachu", "clefairy"]
+    var pokemonList: [String] = ["articuno", "bulbasaur", "caterpie", "charmander", "eevie", "ekans", "jigglypuff", "lugia", "mankey", "pikachu", "clefairy", "sandshrew", "squirtle", "vulpix"]
     
     
     override func viewDidLoad() {
@@ -42,6 +42,7 @@ class ViewController: UIViewController {
             for name in pokemonList {
                 if pokemonName == name {
                     lbPokemonName.text = pokemonName
+                    showPokemon(name)
                     isFound = true
                     break
                 }
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
             
             if !isFound {
                 lbPokemonName.text = "can't find \(pokemonName!)"
+                showPokemon("")
             }
         }
         else {
@@ -72,6 +74,10 @@ class ViewController: UIViewController {
                 completion: nil
             )
         }
+    }
+    
+    func showPokemon(_ name: String) {
+        imgPokemon.image = UIImage(named: name)
     }
 
 }
