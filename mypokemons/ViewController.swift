@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     
     var pokemonList: [String] = ["articuno", "bulbasaur", "caterpie", "charmander", "eevie", "ekans", "jigglypuff", "lugia", "mankey", "pikachu", "clefairy", "sandshrew", "squirtle", "vulpix"]
     
+    var player: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
                 if pokemonName == name {
                     lbPokemonName.text = pokemonName
                     showPokemon(name)
+                    playSound("found")
                     isFound = true
                     break
                 }
@@ -51,10 +54,10 @@ class ViewController: UIViewController {
             if !isFound {
                 lbPokemonName.text = "can't find \(pokemonName!)"
                 showPokemon("")
+                playSound("not_found")
             }
         }
         else {
-            // Show Alert here
             let alert = UIAlertController(
                 title: "Alert",
                 message: "Pokemon's name cannot be empty!",
@@ -79,6 +82,17 @@ class ViewController: UIViewController {
     func showPokemon(_ name: String) {
         imgPokemon.image = UIImage(named: name)
     }
-
+    
+    func playSound(_ sound: String) {
+        let audioPath = Bundle.main.path(forResource: sound, ofType: "wav")!
+        
+        do {
+            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath))
+            player.play()
+        }
+        catch {
+            print("Can't find the audio file")
+        }
+    }
 }
 
