@@ -47,6 +47,9 @@
                                     <constraint firstAttribute="height" constant="50" id="8GW-LB-Aw7"/>
                                 </constraints>
                                 <state key="normal" image="poke_ball"/>
+                                <connections>
+                                    <action selector="bSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evu-BB-bjr"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikachu" translatesAutoresizingMaskIntoConstraints="NO" id="ez7-yZ-txx">
                                 <rect key="frame" x="113" y="287" width="150" height="150"/>
@@ -55,7 +58,7 @@
                                     <constraint firstAttribute="height" constant="150" id="T1c-gB-yOg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JT-hW-gfZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JT-hW-gfZ">
                                 <rect key="frame" x="63" y="537" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="h4n-ce-IhF"/>
@@ -69,7 +72,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gfr-mr-H9N" firstAttribute="top" secondItem="Jye-Zc-H9s" secondAttribute="bottom" constant="10" id="2B2-GM-W63"/>
-                            <constraint firstItem="2fg-Ii-5EX" firstAttribute="top" secondItem="gfr-mr-H9N" secondAttribute="bottom" constant="16" id="5Zw-Nk-HCU"/>
                             <constraint firstItem="2fg-Ii-5EX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="77W-nA-TDG"/>
                             <constraint firstAttribute="trailing" secondItem="zmc-jO-e1a" secondAttribute="trailing" id="7Wa-Rx-3Os"/>
                             <constraint firstItem="2JT-hW-gfZ" firstAttribute="top" secondItem="ez7-yZ-txx" secondAttribute="bottom" constant="100" id="AJ7-r3-IJj"/>
@@ -86,6 +88,11 @@
                             <constraint firstItem="ez7-yZ-txx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qi1-rr-Wpn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgPokemon" destination="ez7-yZ-txx" id="Ki8-ge-q3i"/>
+                        <outlet property="lbPokemonName" destination="2JT-hW-gfZ" id="Qdu-4a-SyG"/>
+                        <outlet property="tbPokemonName" destination="gfr-mr-H9N" id="b17-o5-q6u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
